@@ -1,0 +1,134 @@
+.contact-us {
+    padding: 100px 0;
+    background: url("/images/light-site-bg.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    //   &:before {
+    //     content: '';
+    //     background: linear-gradient(rgba(0,0,0,.09),rgba(0,0,0,.09) 1%,rgba(0,0,0,.09));;
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    // }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .title,
+    .contact-form {
+        flex: 0 0 50%;
+    }
+    .title {
+        padding-bottom: 1px;
+
+        >h2 {
+            text-align: left;
+            font-size: 22px;
+            color: $text-color;
+            margin: 0 0 30px 0;
+        }
+
+        >p {
+            text-align: start;
+            font-family: $primary-font;
+            font-size: 120px;
+            font-weight: 600;
+            // letter-spacing: -5px;
+            color: #333333;
+            line-height: 80%;
+
+            >span {
+                color: $primary-color;
+            }
+
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+
+        .image-container {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .contact-form {
+        margin-top: 60px;
+        max-height: 450px;
+        border-radius: 50px;
+        padding: 40px;
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+
+        .form-control {
+            background-color: transparent;
+            border-bottom: 1px solid rgb(182, 182, 182);
+            box-shadow: none;
+            height: 45px !important;
+            width: 100%;
+            color: $text-color;
+            font-family: $primary-font;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 0;
+        }
+
+        input:hover,
+        textarea:hover,
+        #contact-submit:hover {
+            border-bottom-color: $primary-color;
+        }
+
+        #contact-submit {
+            background: $primary-color;
+            color: $light;
+            display: inline-block;
+            font-family: $primary-font;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 15px 50px;
+            border-radius: 2000px;
+            transition: background-color .7s,color .8s;
+            margin-top: 20px;
+
+            &:hover {
+                background-color: $second-color;
+            }
+        }
+
+        textarea.form-control {
+            padding: 10px;
+            height: 48px !important;
+            outline: none;
+        } 
+    }
+
+    .contact-info {
+        width: 400px;
+        text-align: center;
+        margin-top: 50px;
+
+        .contact-short-info {
+            font-family: $primary-font;
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 10px;
+            color: $text-color;
+
+            h5 {
+                font-size: 20px;
+                font-weight: 800;
+                color: #333333c6;
+                margin: 20px 0 7px 0;
+            }
+        }
+    }
+    
+}
