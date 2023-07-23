@@ -411,6 +411,59 @@ a:hover {
   background-color: #383d43;
 }
 
+/*============================================================
+	For Small Desktop
+==============================================================*/
+@media (min-width: 700px) and (max-width: 1090px) {
+  .counters-item:before {
+    display: none;
+  }
+}
+/*============================================================
+      Tablet (Portrait) Design for a width of 768px
+  ==============================================================*/
+@media (min-width: 768px) and (max-width: 979px) {
+  .hero-area .block {
+    color: #fff;
+  }
+  .hero-area .block .content-hero {
+    display: block;
+  }
+  .hero-area .block .content-hero .content-title h1 {
+    font-size: 100px;
+    letter-spacing: -7px;
+  }
+  .hero-area .block .content-hero .content-text {
+    padding-top: 20px;
+  }
+}
+/*============================================================
+      Mobile (Portrait) Design for a width of 320px
+  ==============================================================*/
+@media only screen and (max-width: 767px) {
+  .hero-area .block {
+    color: #fff;
+  }
+  .hero-area .block .content-hero {
+    display: block;
+  }
+  .hero-area .block .content-hero .content-title h1 {
+    font-size: 70px;
+    letter-spacing: -5px;
+  }
+  .hero-area .block .content-hero .content-text {
+    padding-top: 20px;
+  }
+  .hero-area .block .content-hero .content-text .btn-main {
+    padding: 20px 40px;
+  }
+  .hero-area .block .content-hero .content-text .btn-white {
+    padding: 20px 40px;
+  }
+}
+/*============================================================
+      Mobile (Landscape) Design for a width of 480px
+  ==============================================================*/
 .about {
   padding: 100px 12px 100px 0;
   background: #e2e2e4;
