@@ -496,64 +496,37 @@ a:hover {
 }
 .about .about-card {
   display: flex;
-  position: relative;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  background: #fff;
+  border-radius: 30px;
 }
-.about .about-card-02 {
-  margin-top: 20px;
-  display: flex;
-  position: relative;
-  justify-content: flex-start;
+.about .about-card .about-content {
+  flex: 1 1 50%;
 }
-.about .imgBox, .about .mission-img, .about .how-img {
-  background-size: cover;
-  background-position: center;
-  width: 500px;
-  height: 500px;
-  border-radius: 40px;
-}
-.about .imgBox, .about .about-content, .about .about-content-02 {
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
-}
-.about .about-content-02 {
-  margin-right: 20px;
-}
-.about .about-content {
-  margin-left: 20px;
-}
-.about .about-content, .about .about-content-02 {
-  width: 770px;
-  height: 500px;
-  border-radius: 40px;
-  background-color: #fff;
-  padding: 35px;
-  overflow: hidden;
-}
-.about .about-content .about-ico, .about .about-content-02 .about-ico {
-  width: auto;
-  height: 50px;
-}
-.about .about-content > h3, .about .about-content-02 > h3 {
-  margin-top: 35px;
+.about .about-card .about-content > h3 {
+  margin: 100px 0 0 50px;
   color: #ff1a1a;
   font-family: "Manrope", sans-serif;
-  font-size: 35px;
+  font-size: 50px;
   font-weight: 600;
   letter-spacing: -1.75px;
   line-height: 45px;
   text-size-adjust: 100%;
 }
-.about .about-content .sub-title, .about .about-content-02 .sub-title {
-  margin-top: 35px;
+.about .about-card .about-content .sub-title {
+  width: 65%;
+  margin: 35px 50px;
   color: rgb(44, 47, 51);
   font-family: "Manrope", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
   letter-spacing: -1px;
   line-height: 120%;
 }
-.about .about-content .about-text, .about .about-content-02 .about-text {
-  margin-top: 28px;
+.about .about-card .about-content .about-text {
+  width: 85%;
+  margin: 30px 50px;
   color: #6d8084;
   font-family: "Manrope", sans-serif;
   font-family: 17px;
@@ -561,7 +534,64 @@ a:hover {
   letter-spacing: -0.5px;
   line-height: 150%;
   text-size-adjust: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
+}
+.about .about-card .imgBox {
+  flex: 1 1 50%;
+}
+.about .about-card .imgBox .mission-img {
+  height: 400px;
+  margin: 90px;
+}
+.about .about-card-02 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background: #fff;
+  border-radius: 30px;
+  margin-top: 40px;
+}
+.about .about-card-02 .imgBox {
+  flex: 1 1 50%;
+  height: 100%;
+}
+.about .about-card-02 .imgBox .doit-img {
+  border-radius: 30px 0 0 30px;
+}
+.about .about-card-02 .about-content-02 {
+  flex: 2 1 50%;
+}
+.about .about-card-02 .about-content-02 > h3 {
+  margin-top: 80px;
+  color: #ff1a1a;
+  font-family: "Manrope", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: -1.75px;
+  line-height: 45px;
+  text-size-adjust: 100%;
+}
+.about .about-card-02 .about-content-02 .sub-title {
+  width: 80%;
+  color: rgb(44, 47, 51);
+  font-family: "Manrope", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 120%;
+  margin: 35px 0px;
+}
+.about .about-card-02 .about-content-02 .about-text {
+  width: 90%;
+  color: #6d8084;
+  font-family: "Manrope", sans-serif;
+  font-family: 17px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 150%;
+  text-size-adjust: 100%;
+  padding-bottom: 40px;
+  margin: 30px 0px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -577,39 +607,44 @@ a:hover {
     float: none;
     font-size: 30px;
     margin-bottom: 30px;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 30px;
   }
-  .about .about-card, .about .about-card-02 {
+  .about .about-card,
+  .about .about-card-02 {
     display: flex;
     position: relative;
     justify-content: center;
     flex-wrap: wrap;
   }
-  .about .about-card .imgBox,
-  .about .about-card .mission-img,
-  .about .about-card .how-img, .about .about-card-02 .imgBox,
-  .about .about-card-02 .mission-img,
-  .about .about-card-02 .how-img {
-    width: 280px;
-    height: 280px;
-    border-radius: 30px;
-  }
   .about .about-card .about-content,
-  .about .about-card .about-content-02, .about .about-card-02 .about-content,
+  .about .about-card .about-content-02,
+  .about .about-card-02 .about-content,
   .about .about-card-02 .about-content-02 {
     width: 300px;
     height: auto;
     border-radius: 30px;
     margin: 10px;
   }
+  .about .about-card .imgBox .mission-img {
+    margin: 10px 0 40px 50px;
+    height: 300px;
+  }
+  .about .about-card .about-content > h3 {
+    margin: 50px 0;
+  }
+  .about .about-card .about-content .sub-title {
+    width: 95%;
+    margin: 35px 0px;
+  }
+  .about .about-card .about-content .about-text {
+    width: 95%;
+    padding-bottom: 0px;
+    margin: 30px 0px;
+  }
   .about .about-content,
   .about .about-content-02 {
     padding: 25px;
-  }
-  .about .about-content .about-ico,
-  .about .about-content-02 .about-ico {
-    height: 30px;
   }
   .about .about-content > h3,
   .about .about-content-02 > h3 {
@@ -662,12 +697,14 @@ a:hover {
   margin: auto;
 }
 .our-value .accordion .accordion-body p {
-  color: #999999;
-  font-size: 20px;
+  color: #6d8084;
+  font-family: "Manrope", sans-serif;
+  font-family: 17px;
+  font-weight: 600;
   padding: 20px;
 }
 .our-value .accordion-item {
-  background: rgba(255, 255, 255, 0.4862745098);
+  background: #ffffff;
   border-radius: 40px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
@@ -711,7 +748,6 @@ a:hover {
     padding: 15px;
   }
   .our-value .accordion-item {
-    margin-bottom: 20px;
     border-radius: 30px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   }
