@@ -18,7 +18,8 @@
 
     &:before {
         content: '';
-        background: linear-gradient(rgba(0,0,0,.59),rgba(0,0,0,.59) 27%,rgba(0,0,0,.59));;
+        background: linear-gradient(rgba(0, 0, 0, .59), rgba(0, 0, 0, .59) 27%, rgba(0, 0, 0, .59));
+        ;
         position: absolute;
         top: 0;
         right: 0;
@@ -35,7 +36,7 @@
 
             .content-title {
                 flex: 1;
-    
+
                 h1 {
                     margin-top: 140px;
                     font-family: $primary-font;
@@ -44,21 +45,22 @@
                     line-height: 90%;
                     letter-spacing: -10px;
                     text-align: left;
-        
+
                     >span {
                         color: $primary-color;
                     }
                 }
             }
-    
+
             .content-text {
                 flex: 1;
                 padding-top: 70%;
-                
+
                 hr {
                     color: $light;
-                    
+
                 }
+
                 p {
                     color: $light;
                     width: 98%;
@@ -68,12 +70,12 @@
                     letter-spacing: -.03em;
                     margin-bottom: 20px;
                 }
-        
+
                 .btn-main {
                     padding: 20px 45px;
                     margin: 20px 7px 0 0;
                 }
-                
+
                 .btn-white {
                     color: $dark-bg_color;
                     background-color: $light;
@@ -89,3 +91,89 @@
         }
     }
 }
+
+
+/*============================================================
+	For Small Desktop
+==============================================================*/
+
+@media (min-width: 700px) and (max-width: 1090px) {
+    .counters-item:before {
+        display: none;
+    }
+
+}
+
+@media (min-width: 980px) and (max-width: 1150px) {}
+
+/*============================================================
+      Tablet (Portrait) Design for a width of 768px
+  ==============================================================*/
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .hero-area {
+        .block {
+            color: $light;
+
+            .content-hero {
+                display: block;
+
+                .content-title {
+
+                    h1 {
+                        font-size: 100px;
+                        letter-spacing: -7px;
+                    }
+                }
+
+                .content-text {
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+/*============================================================
+      Mobile (Portrait) Design for a width of 320px
+  ==============================================================*/
+
+@media only screen and (max-width: 767px) {
+    .hero-area {
+        .block {
+            color: $light;
+
+            .content-hero {
+                display: block;
+
+                .content-title {
+
+                    h1 {
+                        font-size: 70px;
+                        letter-spacing: -5px;
+                    }
+                }
+
+                .content-text {
+                    padding-top: 20px;
+
+                    .btn-main {
+                        padding: 20px 40px;
+                    }
+
+                    .btn-white {
+                        padding: 20px 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*============================================================
+      Mobile (Landscape) Design for a width of 480px
+  ==============================================================*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
