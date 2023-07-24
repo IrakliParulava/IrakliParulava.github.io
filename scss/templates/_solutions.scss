@@ -1,127 +1,126 @@
 .solutions {
-    background-color: $dark-bg_color;
+  background-color: $light-bg_color;
 
-    .title{
-        h2 {
-            font-size: 22px;
-            color: $text-color;
-            margin: 70px 0 30px 0;
-        }
+  .title {
+    h2 {
+      text-align: initial;
+      font-size: 22px;
+      color: $text-color;
+      margin: 70px 0 30px 0;
+    }
 
-        p {
-            font-size: 65px;
-            font-weight: 900;
-            color: $light;
-            line-height: 70px;
-            >span {
-                color: $primary-color;
-            }
-        }
+    p {
+      text-align: initial;
+      font-size: 65px;
+      font-weight: 900;
+      color: #333333;
+      line-height: 70px;
+
+      >span {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .list-container {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: gray lightgray;
+  }
+
+  .list-container::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  //   .list-container::-webkit-scrollbar-track {
+  //     background-color: lightgray;
+  //   }
+
+  //   .list-container::-webkit-scrollbar-thumb {
+  //     background-color: gray;
+  //   }
+
+  //   .list-container::-webkit-scrollbar-thumb:hover {
+  //     background-color: darkgray;
+  //   }
+
+
+
+  .ex-container {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    max-height: 650px;
+    margin: 30px 0 100px 0;
+
+    .image-container {
+      flex: 1;
+      margin-right: 20px;
+      padding: 40px 50px 40px 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        object-fit: cover;
+      }
     }
 
     .list-container {
-        overflow-y: auto;
-        scrollbar-width: thin;
-        scrollbar-color: gray lightgray;
+      flex: 1;
+      overflow-y: auto;
+      // background: url("/images/skills/ico-bg.png");
+    }
+
+    .list-item {
+      color: $text-color;
+      padding: 50px 10px 40px 0px;
+      border-bottom: 0.5px solid $text-color;
+      cursor: pointer;
+      box-shadow: none;
+      transition: 1.3s;
+
+      p {
+        margin-top: 40px;
+        font-family: $primary-font;
+        font-size: 18px;
+        font-weight: 600;
+        color: $text-color;
+
+        &:hover {
+          color: $light;
+        }
       }
       
-      .list-container::-webkit-scrollbar {
-        width: 0px;
-      }
-      
-    //   .list-container::-webkit-scrollbar-track {
-    //     background-color: lightgray;
-    //   }
-      
-    //   .list-container::-webkit-scrollbar-thumb {
-    //     background-color: gray;
-    //   }
-      
-    //   .list-container::-webkit-scrollbar-thumb:hover {
-    //     background-color: darkgray;
-    //   }
-    
-      
-
-    .ex-container {
-        display: grid;
-        grid-template-columns: 45% 55%;
-        max-height: 650px;
-        margin: 30px 0 100px 0;
-
-        .image-container {
-            flex: 1;
-            margin-right: 20px;
-            padding: 40px 50px 40px 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 50px;
-                object-fit: cover;
-            }
-        }
-
-        .list-container {
-            flex: 1;
-            overflow-y: auto;
-            background: url("/images/skills/ico-bg.png");
-        }
-
-        .list-item {
-            color: $text-color;
-            padding: 50px 10px 40px 0px;
-            border-bottom: 0.5px solid $text-color;
-            cursor: pointer;
-            box-shadow: none;
-            
-            p {
-                margin-top: 40px;
-                font-family: $primary-font;
-                font-size: 18px;
-                font-weight: 600;
-                color: $text-color;
-            }
-            
-            &:hover {
-                color: $light;
-            }
-        }
-
-        // @media (max-width: 768px) {
-        //     flex-direction: column;
-
-        //     .image-container {
-        //         margin-right: 0;
-        //         margin-bottom: 20px;
-        //     }
-        // }
-    }   
+     
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .title {
-        h2 {
-          font-size: 16px;
-          margin: 30px 0 15px 0;
-        }
-  
-        p {
-          font-size: 40px;
-          line-height: 45px;
-        }
-      }
-  
-      .ex-container {
-        .image-container {
-          height: 200px; /* Adjust the height as needed */
-        }
-  
-        .list-container {
-          max-height: 200px; /* Adjust the height as needed */
-        }
-      }
+  .title {
+    h2 {
+      font-size: 16px;
+      margin: 30px 0 15px 0;
+    }
+
+    p {
+      font-size: 40px;
+      line-height: 45px;
+    }
+  }
+
+  .ex-container {
+    .image-container {
+      height: 200px;
+      /* Adjust the height as needed */
+    }
+
+    .list-container {
+      max-height: 200px;
+      /* Adjust the height as needed */
+    }
+  }
 }
