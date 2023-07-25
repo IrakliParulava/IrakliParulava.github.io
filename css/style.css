@@ -52,6 +52,7 @@ a:hover {
   transition: background-color 0.7s, color 0.8s;
 }
 .btn-main:hover {
+  color: #fff;
   background-color: #ac0a0a;
 }
 
@@ -590,7 +591,21 @@ a:hover {
   line-height: 150%;
   text-size-adjust: 100%;
   padding-bottom: 40px;
-  margin: 30px 0px;
+  margin: 30px 0px 0 0;
+}
+.about .about-card-02 .about-content-02 .btn-main {
+  padding: 20px 45px;
+  margin: 0px 7px 50px 0;
+}
+.about .about-card-02 .about-content-02 .btn-white {
+  color: #fff;
+  background-color: #383d43;
+  padding: 20px 50px;
+  margin: 0px 1px 50px 0;
+}
+.about .about-card-02 .about-content-02 .btn-white:hover {
+  color: #fff;
+  background-color: #ac0a0a;
 }
 
 @media only screen and (max-width: 767px) {
@@ -720,11 +735,7 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   .our-value {
-    background: url("/images/light-site-bg.jpg");
-    background-size: cover;
-    position: relative;
-    height: auto;
-    min-height: 100vh;
+    padding: 50px;
   }
   .our-value .container {
     display: flex;
@@ -877,6 +888,9 @@ a:hover {
     line-height: 70px;
     text-align: center;
   }
+  .contact-us .contact-imgBox .contact-img {
+    padding-left: 70px;
+  }
   .contact-us .contact-form {
     padding: 25px;
     border-radius: 30px;
@@ -949,7 +963,7 @@ a:hover {
 .services .card .card-text h2 {
   color: #ff1a1a;
   letter-spacing: -0.05em;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 100%;
 }
@@ -1052,7 +1066,7 @@ a:hover {
 .solutions .list-container {
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: gray lightgray;
+  scrollbar-color: rgba(128, 128, 128, 0) rgba(211, 211, 211, 0);
 }
 .solutions .list-container::-webkit-scrollbar {
   width: 0px;
@@ -1218,18 +1232,11 @@ a:hover {
 }
 
 .testimonial {
-  padding: 30px 0;
+  padding: 30px 0 0 0;
   background: #e2e2e4;
-  padding-bottom: 0px;
-}
-.testimonial:before {
-  background: rgba(59, 59, 59, 0.2);
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 .testimonial .item i {
   font-size: 60px;
@@ -1462,6 +1469,14 @@ a:hover {
   color: #fff;
 }
 
+@media only screen and (max-width: 767px) {
+  .clients-logo-slider {
+    margin: 20px;
+  }
+  .clients-logo-slider img {
+    color: #fff;
+  }
+}
 .top-footer {
   background-color: #2c2f33;
   padding: 100px 0 80px;

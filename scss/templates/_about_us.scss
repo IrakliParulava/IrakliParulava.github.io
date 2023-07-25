@@ -145,7 +145,24 @@
         line-height: 150%;
         text-size-adjust: 100%;
         padding-bottom: 40px;
-        margin: 30px 0px;
+        margin: 30px 0px 0 0;
+      }
+
+      .btn-main {
+        padding: 20px 45px;
+        margin: 0px 7px 50px 0;
+      }
+
+      .btn-white {
+        color: $light;
+        background-color: $card-bg_color;
+        padding: 20px 50px;
+        margin: 0px 1px 50px 0;
+
+        &:hover {
+          color: $light;
+          background-color: $second-color;
+        }
       }
     }
   }
@@ -179,7 +196,7 @@
       justify-content: center;
       flex-wrap: wrap;
 
-      
+
 
       // .imgBox {
       //   width: 280px;
@@ -196,9 +213,9 @@
       }
     }
 
-    .about-card{
+    .about-card {
       .imgBox {
-  
+
         .mission-img {
           margin: 10px 0 40px 50px;
           height: 300px;
@@ -209,12 +226,12 @@
         >h3 {
           margin: 50px 0;
         }
-  
+
         .sub-title {
           width: 95%;
           margin: 35px 0px;
         }
-  
+
         .about-text {
           width: 95%;
           padding-bottom: 0px;
@@ -222,7 +239,7 @@
         }
       }
     }
-    
+
 
     .about-content,
     .about-content-02 {

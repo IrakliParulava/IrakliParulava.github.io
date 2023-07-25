@@ -25,7 +25,7 @@
   .list-container {
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: gray lightgray;
+    scrollbar-color: rgba(128, 128, 128, 0) rgba(211, 211, 211, 0);
   }
 
   .list-container::-webkit-scrollbar {

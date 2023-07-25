@@ -33,3 +33,13 @@
         margin: 20px;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .clients-logo-slider {
+        img {
+            color: $light;
+        }
+
+        margin: 20px;
+    }
+}

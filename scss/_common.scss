@@ -52,6 +52,7 @@ a:hover {
     transition: background-color .7s,color .8s;
 
     &:hover {
+        color: $light;
         background-color: $second-color;
     }
 }
@@ -62,7 +63,6 @@ a:hover {
     font-size: 13px;
     letter-spacing: 1px;
     padding: 14px 35px;
-    // text-transform: uppercase;
     border-radius: 2000px;
 
     &:hover {
