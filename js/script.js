@@ -16,6 +16,9 @@
     autoplaySpeed: 2000
   });
 
+
+
+  
   $('.clients-logo-slider').slick({
     infinite: true,
     arrows: false,
@@ -97,30 +100,47 @@ $(window).scroll(function () {
   lastScrollTop = scroll;
 });
 
+
+
+
+$(".card").click(function () {
+  $(".card").removeClass("active");
+  $(this).addClass("active");
+});
+
+
+
+
 })(jQuery);
 
 
 
-const tabElms = document.querySelectorAll('a[data-bs-toggle="list"]')
-tabElms.forEach(tabElm => {
-  tabElm.addEventListener('shown.bs.tab', event => {
-    event.target
-    event.relatedTarget
-  })
-})
+// const tabElms = document.querySelectorAll('a[data-bs-toggle="list"]')
+// tabElms.forEach(tabElm => {
+//   tabElm.addEventListener('shown.bs.tab', event => {
+//     event.target
+//     event.relatedTarget
+//   })
+// })
 
 
 
 
 const scrollList = document.getElementById('scroll-list');
 const imageElement = document.getElementById('active-image');
+const titleElement = document.querySelector('.title h2');
+const paragraphElement = document.querySelector('.title p');
 
 const listItems = scrollList.getElementsByClassName('list-item');
 
 function handleItemHover(event) {
   const listItem = event.target.closest('.list-item');
   const titleText = listItem.getAttribute('data-title');
+  const paragraphText = listItem.querySelector('p').textContent;
   const imageLink = getImageLink(titleText);
+  
+  titleElement.textContent = titleText;
+  paragraphElement.textContent = paragraphText;
   imageElement.src = imageLink;
 }
 

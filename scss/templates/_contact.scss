@@ -1,7 +1,6 @@
 .contact-us {
-    padding: 30px 0 120px 0;
+    padding: 30px 0 200px 0;
     background: $light-bg_color;
-    background-size: cover;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
@@ -32,30 +31,80 @@
             }
         }
     }
-
+    
     .contact-page {
         display: flex;
         flex-wrap: wrap;
-        // width: 100%;
+        background: $primary-color;
+        max-height: 400px;
+        margin-top: 50px;
+        
 
-        .contact-imgBox {
-            flex: 1 1 50%;
-            // height: 80%;
+        .contact-info {
+            flex: 1 1 30%;
+            text-align: start;
+            margin: 30px 0 0 50px;
+    
+            .contact-short-info {
+                li {
+                    >span {
+                        font-family: $primary-font;
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin: 10px 0 0 0;
+                        color: $light;
+                    }
+                }
+                
+                
+                .bi {
+                    margin: 0 10px 0 0;
+                    color: $light;
 
-            .contact-img {
-                height: 80%;
+                    // &:hover {
+                    //     color: #333333;
+                    // }
+                }
+                h5 {
+                    font-size: 26px;
+                    font-weight: 700;
+                    color: #ffffff;
+                    margin: 20px 0 7px 0;
+                }
+            }
+
+            .bi {
+                margin: 50px 20px 0 0;
+                color: $light;
+                transition: 0.7s;
+
+                &:hover {
+                    color: #333333;
+                }
             }
         }
 
+        // .contact-imgBox {
+        //     flex: 1 1 50%;
+
+        //     .contact-img {
+        //         height: 80%;
+        //     }
+        // }
+
         .contact-form {
-            flex: 2 1 50%;
-            // margin-top: 60px;
-            max-height: 450px;
+            flex: 2 1 70%;
+            height: 600px;
             background: $light;
-            border-radius: 50px;
             padding: 40px;
-            box-shadow: 0px 0px 20px 3px rgba(77, 77, 77, 0.1);
+            margin: -100px 150px 0 0;
+            box-shadow: 0px 0px 20px 15px rgba(77, 77, 77, 0.1);
     
+            >h2 {
+                font-family: $primary-font;
+                font-weight: 800;
+            }
+
             .form-control {
                 background-color: transparent;
                 border: none;
@@ -95,99 +144,82 @@
     
             textarea.form-control {
                 padding: 10px;
-                height: 48px !important;
+                height: 140px !important;
                 outline: none;
             }
         }
 
     }
 
-    
+    @media only screen and (max-width: 767px) {
+        .title {
+            > p {
+                width: 100%;
+                font-size: 40px;
+                line-height: 40px;
+                margin-bottom: 30px;
+            }
+        }
 
-    .contact-info {
-        width: 400px;
-        text-align: center;
-        margin-top: 50px;
+        .contact-page {
+            flex-direction: column;
+            max-height: none;
 
-        .contact-short-info {
-            font-family: $primary-font;
-            font-size: 14px;
-            font-weight: 300;
-            margin-top: 10px;
-            color: $text-color;
+            .contact-info {
+                flex: 1 1 100%;
+                margin: 0 0 30px 0;
+                text-align: center;
 
-            h5 {
-                font-size: 20px;
-                font-weight: 800;
-                color: #333333c6;
-                margin: 20px 0 7px 0;
+                .contact-short-info {
+                    margin-top: 30px;
+                }
+            }
+
+            .contact-form {
+                flex: 1 1 100%;
+                margin: 0;
+                padding: 40px;
             }
         }
     }
 
-}
-
-
-@media only screen and (max-width: 767px) {
-
-    .contact-us {
-        padding: 60px 0;
-
-        .container {
-            display: block;
-        }
-
+    @media (min-width: 768px) and (max-width: 979px) {
         .title {
-            >h2 {
-                font-size: 18px;
-                margin-bottom: 15px;
+            > p {
+                font-size: 55px;
+                line-height: 55px;
+            }
+        }
+
+        .contact-page {
+            flex-direction: column;
+            max-height: none;
+
+            .contact-info {
+                flex: 1 1 100%;
+                margin: 0 0 30px 0;
                 text-align: center;
+
+                .contact-short-info {
+                    margin-top: 0;
+                }
             }
 
+            .contact-form {
+                flex: 1 1 100%;
+                min-width: 80%;
+                margin: 0 0 70px 10%; 
+                padding: 40px;
 
-            >p {
-                font-size: 80px;
-                line-height: 70px;
-                text-align: center;
-            }
-        }
+                >h2 {
+                    font-size: 24px;
+                }
 
-        .contact-imgBox {
-
-            .contact-img {
-                padding-left: 70px;
-            }
-        }
-        
-        .contact-form {
-            padding: 25px;
-            border-radius: 30px;
-        }
-
-        .form-control {
-            height: 30px !important;
-            font-size: 12px;
-        }
-
-        textarea.form-control {
-            height: 60px !important;
-        }
-
-        #contact-submit {
-            width: 100%;
-            font-size: 12px;
-            margin: 10px 0;
-        }
-
-        .contact-info {
-            .contact-short-info {
-                font-size: 10px;
-
-                h5 {
-                    font-size: 16px;
-                    margin: 10px 0 3px 0;
+                .form-control {
+                    font-size: 14px;
                 }
             }
         }
     }
+
 }

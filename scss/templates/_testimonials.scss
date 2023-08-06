@@ -1,43 +1,50 @@
 .testimonial {
     padding: 30px 0 0 0;
-    background: $light-bg_color;
-    background-size: cover;
-    background-position: center;
+    background: $primary-color;
+    // background-size: cover;
+    // background-position: center;
     position: relative;
 
-    .item {
-        i {
-            font-size: 60px;
-            color: $light;
-            margin-bottom: 50px;
-            display: inline-block;
-        }
+    .bi-wechat {
+        color: #ffffff;
+    }
 
+    .item {
         .client-details {
-            padding-bottom: 30px;
+            padding-top: 30px;
 
             p {
                 font-family: $primary-font;
                 font-size: 16px;
+                font-style: italic;
                 line-height: 1.65;
-                color: $text-color;
-                font-weight: 800;
+                color: $light;
+                font-weight: 400;
                 padding: 0 10%;
             }
         }
 
-        .client-thumb img {
-            display: inline-block;
-            border-radius: 100%;
-            width: 120px;
-            height: auto;
-            margin-bottom: 20px;
+        .bi-chat-dots-fill {
+            color: #ffffff;
         }
+        // .client-thumb img {
+        //     display: inline-block;
+        //     border-radius: 100%;
+        //     width: 120px;
+        //     height: auto;
+        //     margin-bottom: 20px;
+        // }
 
         .client-meta {
-            margin: 20px 0 100px 0;
+            margin: 20px 0 40px 0;
             font-family: $primary-font;
-            color: $primary-color;
+            font-weight: 800;
+            color: $light;
+
+            >h3 {
+                font-size: 32px;
+                font-weight: 800;
+            }
         }
     }
 }
