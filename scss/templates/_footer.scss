@@ -29,6 +29,10 @@
     font-family: $primary-font;
     display: block;
 
+    .bi {
+      margin-right: 10px;
+    }
+
     &:hover {
       color: $primary-color;
     }

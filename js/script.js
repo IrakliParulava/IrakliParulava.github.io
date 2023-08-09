@@ -104,8 +104,12 @@ $(window).scroll(function () {
 
 
 $(".card").click(function () {
-  $(".card").removeClass("active");
-  $(this).addClass("active");
+  if ($(this).hasClass("active")) {
+    $(this).removeClass("active");
+  } else {
+    $(".card").removeClass("active");
+    $(this).addClass("active");
+  }
 });
 
 

@@ -1,188 +1,319 @@
-/*=================================================================
-  Single Blog Page
-==================================================================*/
-
-
-#blog-banner {
-  padding-bottom: 100px;
-  padding-top: 150px;
+.single-page-header {
+	background-image: url('/images/blog/headBG2.jpg');
+	background-size: cover;
+	padding:200px 0 150px;
+	text-align: center;
+	color:$light;
+	position: relative;
+	&:before {
+		background: rgba(0, 0, 0, 0.8);
+		position: absolute;
+		content: '';
+		top:0;
+		right:0;
+		left:0;
+		bottom:0;
+	}
 }
 
-#blog-page {
-  margin: 0 0 40px;
+.posts {
+  padding-bottom: 40px;
 }
 
-.post-meta {
-  font-size: 13px;
-  margin: 20px 0 0;
-  padding: 0 20px 10px;
-  a {
-    color: $primary-color;
-  }
-  > span {
-    color: #666;
-    border-right: 1px solid #dedede;
-    display: inline-block;
-    font-size: 13px;
-    margin: 10px 10px 0 0;
-    padding-right: 10px;
-    &:last-child {
-      border-right: 0;
-    }
-    i {
-      margin-right: 5px;
-    }
-  }
-}
+.post-item {
+  background: $light;
+  margin-bottom: 30px;
 
-
-.post-excerpt {
-  padding: 0 20px;
-  margin-bottom: 60px;
-  h3 {
-    a {
-      color: #000;
-    }
+  .img-fluid {
+    width: 100%;
+    height: 300px;
   }
-  blockquote {
-    line-height: 22px;
-    margin: 20px 0;
-    font-size: 16px;
-  }
-}
 
-
-.single-blog {
-    background-color: #fff;
-    margin-bottom: 50px;
+  .content {
     padding: 20px;
-}
 
-.blog-subtitle {
-  font-size: 15px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #dedede;
-  margin-bottom: 25px;
-  text-transform: uppercase;
-}
+    h3 {
+      a {
+        color: #000;
+      }
+    }
 
-.next-prev {
-  border-bottom: 1px solid #dedede;
-  border-top: 1px solid #dedede;
-  margin: 20px 0;
-  padding: 25px 0;
-  a {
-    color: #000;
-    &:hover {
-      color: $primary-color;
+    p {
+      color: #757575;
+      margin: 10px 0;
+    }
+
+    .btn-main {
+      padding: 12px 25px;
+      margin: 15px 0;
     }
   }
-  .prev-post i {
-    margin-right: 10px;
-  }
+}
 
-  .next-post i {
-    margin-left: 10px;
+.blog-details {
+  h3 {
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 10px;
   }
 }
 
-.social-profile {
-  ul {
-   li {
-      margin: 0 10px 0 0;
-      display: inline-block;
-      a {
-        color: #4e595f;
-        display: block;
-        font-size: 16px;
-        i {
-          &:hover {
-            color: $primary-color;
-          }
+.post {
+  &-content {
+    ul {
+      margin-bottom: 20px;
+
+      li {
+        color: #aaa;
+
+        a {
+          color: #aaa;
+        }
+      }
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    blockquote {
+      border-left: 2px solid $primary-color;
+      padding: 40px 35px;
+      margin-bottom: 30px;
+      background: rgb(238, 238, 238);
+    }
+
+    &-share {
+      margin-bottom: 100px;
+
+      li a {
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+        border: 1px solid #ddd;
+        text-align: center;
+        background: $light;
+        transition: .3s ease;
+        margin-right: 10px;
+        color: $black;
+        display: inline-block;
+
+        &:hover {
+          background: $primary-color;
+          border-color: $primary-color;
+          color: $light;
         }
       }
     }
   }
 }
 
-.comments-section {
-  margin-top: 35px;
-}
-
-
-.author-about {
-  margin-top: 40px;
-}
-.post-author {
-  margin-right: 20px;
-}
-
-.post-author > img {
-  border: 1px solid #dedede;
-  max-width: 120px;
-  padding: 5px;
-  width: 100%;
-}
-
-
-
 .comment-list {
-  ul {
-    margin-top: 20px;
-    li {
-      margin-bottom: 20px;
+  padding-left: 0;
+  margin-bottom: 70px;
+
+  &-item {
+    padding: 25px 0;
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+
+    &:last-child {
+      border: 0;
     }
-  }
-}
 
+    &-image {
+      margin-right: 20px;
+    }
 
-.comment-wrap {
-  border: 1px solid #dedede;
-  border-radius: 1px;
-  margin-left: 20px;
-  padding: 10px;
-  position: relative;
-  .author-avatar {
-    margin-right: 10px;
-  }
-  .media {
-    .media-heading {
-      font-size: 14px;
-      margin-bottom: 8px;
-      a {
-        color: $primary-color;
-        font-size: 13px;
+    &-content {
+      h5 {
+        color: $black;
+        margin-bottom: 5px;
+      }
+
+      h6 {
+        color: $black;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 5px;
       }
     }
-    .comment-meta {
-      font-size: 12px;
-      color: #888;
-    }
-    p {
-      margin-top: 15px;
+
+    .comment-btn {
+      position: absolute;
+      top: 25px;
+      right: 0;
+      background: $light;
+      padding: 10px 30px;
+      border: 1px solid #ddd;
+      text-transform: capitalize;
+      color: #000;
+      font-size: 15px;
+
+      @media(max-width: 575px) {
+        position: unset;
+        margin-top: 15px;
+        display: inline-block;
+      }
+
+      &:hover {
+        background: $primary-color;
+        color: $light;
+      }
     }
   }
-
 }
 
+.comment-form {
+  margin-top: 40px;
 
-.comment-reply-form {
-  margin-top: 80px;
-  input,textarea {
-    height: 35px;
-    border-radius: 0;
+  .form-control {
+    background-color: transparent;
+    border: 1px solid #dedede;
     box-shadow: none;
-    &:focus {
-      box-shadow:none;
-      border:1px solid $primary-color;
-    }
+    height: 45px !important;
+    color: #0c0c0c;
+    height: 38px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 20px;
   }
-  textarea,.btn-main {
-    height: auto;
+
+  textarea.form-control {
+    height: 200px !important;
+  }
+
+  .btn-primary {
+    background: $primary-color;
+    border-radius: 0;
+    padding: 10px 20px;
+    border: 0;
   }
 }
 
-                            
+.widget {
+  margin-bottom: 30px;
 
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 
+  &-search {
+    position: relative;
 
+    .form-control {
+      border: 1px solid #dedede;
+      border-radius: 0;
+      height: 50px;
+    }
+
+    &-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 50px;
+      background: $primary-color;
+      border: 0;
+
+      .bi {
+        color: $light;
+      }
+    }
+  }
+
+  &-categories {
+    &-list {
+      padding-left: 0px;
+
+      li {
+        border-bottom: 1px solid #ddd;
+
+        &:last-child {
+          border: 0;
+        }
+
+        a {
+          display: block;
+          padding: 15px 0;
+          color: #000;
+          font-size: 15px;
+          transition: .3s ease;
+
+          i {
+            font-size: 10px;
+            margin-right: 10px;
+          }
+
+          &:hover {
+            background: $primary-color;
+            color: $light;
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  &-allPosts {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    margin: 30px 0;
+
+    .btn-white {
+      padding: 15px 30%;
+      color: $light;
+      font-size: 20px;
+      background: $primary-color;
+      border: 9px solid $primary-color;
+      border-radius: 0;
+
+      &:hover {
+        color: $primary-color;
+        background-color: $light;
+        border: 9px solid $primary-color;
+      }
+    }
+  }
+
+  &-post {
+    &-list {
+      padding-left: 0;
+
+      &-item {
+        padding: 15px 0;
+        display: flex;
+      }
+    }
+
+    &-image {
+      margin-right: 10px;
+      height: 90px;
+      width: 130px;
+      overflow: hidden;
+
+      img {
+        height: 90px;
+        width: 120px;
+      }
+    }
+
+    &-content {
+      h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        transition: .3s ease;
+        color: $black;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
