@@ -608,13 +608,13 @@ a:hover {
   background-color: #ac0a0a;
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .about {
     padding: 50px 12px 50px 0;
   }
   .about .title > h2 {
     font-size: 18px;
-    margin: 30px 0 20px 0;
+    margin: 10px 0 10px 0;
   }
   .about .title > p {
     width: 100%;
@@ -644,8 +644,11 @@ a:hover {
     margin: 10px 0 40px 50px;
     height: 300px;
   }
+  .about .about-card .about-content {
+    padding: 25px;
+  }
   .about .about-card .about-content > h3 {
-    margin: 50px 0;
+    margin: 25px 0;
   }
   .about .about-card .about-content .sub-title {
     width: 95%;
@@ -656,33 +659,36 @@ a:hover {
     padding-bottom: 0px;
     margin: 30px 0px;
   }
-  .about .about-content,
-  .about .about-content-02 {
+  .about .about-card-02 .about-content-02 {
     padding: 25px;
   }
-  .about .about-content > h3,
-  .about .about-content-02 > h3 {
-    font-size: 26px;
-    margin-top: 25px;
-    line-height: 35px;
+  .about .about-card-02 .about-content-02 > h3 {
+    margin: 25px 0;
   }
-  .about .about-content .sub-title,
-  .about .about-content-02 .sub-title {
-    font-size: 16px;
-    margin-top: 25px;
-    line-height: 120%;
+  .about .about-card-02 .about-content-02 .sub-title {
+    width: 95%;
+    margin: 35px 0px;
   }
-  .about .about-content .about-text,
-  .about .about-content-02 .about-text {
-    margin-top: 20px;
-    font-size: 14px;
-    line-height: 150%;
+  .about .about-card-02 .about-content-02 .about-text {
+    width: 95%;
+    padding-bottom: 0px;
+    margin: 30px 0px;
+  }
+  .about .about-card-02 .about-content-02 .btn-main {
+    padding: 15px 20px;
+    margin: 0px 7px 20px 0;
+  }
+  .about .about-card-02 .about-content-02 .btn-white {
+    color: #fff;
+    background-color: #383d43;
+    padding: 15px 25px;
+    margin: 0px 1px 20px 0;
   }
 }
 .our-value {
   background: #ff1a1a;
   position: relative;
-  max-height: 650px;
+  height: 700px;
 }
 .our-value .container {
   display: flex;
@@ -733,37 +739,39 @@ a:hover {
   box-shadow: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .our-value {
-    padding: 50px;
+    padding: 40px;
+    height: 800px;
   }
   .our-value .container {
     display: flex;
     flex-direction: column;
   }
-  .our-value .title > h2 {
+  .our-value .container .title {
+    padding: 10px;
+  }
+  .our-value .container .title > h2 {
     margin-top: 20px;
-    font-size: 64px;
+    font-size: 60px;
     text-align: center;
     letter-spacing: -4px;
   }
-  .our-value .title > h2 > span {
-    color: #ff1a1a;
+  .our-value .container .title > h2 > span {
+    color: #fff;
   }
   .our-value .accordion {
-    margin-top: 30px;
+    margin-top: 10px;
   }
   .our-value .accordion .accordion-body p {
-    font-size: 18px;
-    padding: 15px;
+    font-size: 14px;
+    padding: 5px;
   }
-  .our-value .accordion-item {
-    border-radius: 30px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  .our-value .accordion .accordion-item {
+    margin-bottom: 2px;
   }
-  .our-value .accordion-item h2 .accordion-button {
+  .our-value .accordion .accordion-item h2 .accordion-button {
     font-size: 20px;
-    padding: 15px 30px;
   }
 }
 .contact-us {
@@ -882,11 +890,18 @@ a:hover {
   height: 140px !important;
   outline: none;
 }
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
+  .contact-us {
+    padding: 30px 0 100px 0;
+  }
+  .contact-us .title {
+    padding: 10px;
+  }
   .contact-us .title > p {
     width: 100%;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 45px;
+    line-height: 50px;
+    letter-spacing: -2.5px;
     margin-bottom: 30px;
   }
   .contact-us .contact-page {
@@ -949,6 +964,7 @@ a:hover {
   margin: 120px 0 30px 0;
 }
 .services .main-title > p {
+  width: 70%;
   text-align: initial;
   font-size: 65px;
   font-weight: 700;
@@ -1047,37 +1063,48 @@ a:hover {
   opacity: 0;
   transition: max-height 0.2s ease-in-out;
 }
-@media only screen and (max-width: 767px) {
-  .services .title > h2 {
-    font-size: 16px;
-    margin: 60px 0 15px 0;
+@media screen and (max-width: 767px) {
+  .services .main-title > h1 {
+    font-size: 18px;
+    margin: 100px 0 30px 0;
   }
-  .services .title > p {
-    font-size: 50px;
-    line-height: 50px;
-    letter-spacing: -2.5px;
+  .services .main-title > p {
+    width: 100%;
+    font-size: 45px;
+    letter-spacing: -2px;
+    line-height: 40px;
   }
-  .services .wrapper {
-    padding-top: 40px;
-    padding-bottom: 60px;
+  .services .main-title > p > span {
+    color: #ff1a1a;
   }
-  .services .card .card-text {
-    padding: 20px;
+  .services .cards {
+    flex-direction: column; /* Change to column for a list layout */
   }
-  .services .card .card-text h2 {
-    font-size: 22px;
+  .services .card {
+    max-width: 500px;
+    min-height: 70px;
+    border-radius: 30px;
+    transition: max-height 0.7s ease-in-out;
   }
-  .services .card .card-text span {
-    font-size: 14px;
-    margin-bottom: 25px;
+  .services .card.active {
+    max-width: 500px;
+    max-height: 700px;
   }
-  .services .card .card-text p {
-    font-size: 12px;
-    margin-top: 15%;
+  .services .card.active .title h2 {
+    margin-bottom: 10px;
+  }
+  .services .card .card-body .title {
+    background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #2d2d2d 100%);
+  }
+  .services .card .card-body .title h2 {
+    font-size: clamp(22px, 5vw, 24px);
+    margin-top: 40px;
+    transform: none;
   }
 }
 
 .solutions {
+  padding-bottom: 100px;
   background-color: #eeeeee;
 }
 .solutions .title h2 {
@@ -1087,7 +1114,9 @@ a:hover {
   margin: 70px 0 30px 0;
 }
 .solutions .title p {
-  text-align: initial;
+  width: 56%;
+  margin-left: 0;
+  text-align: start;
   font-size: 65px;
   font-weight: 700;
   letter-spacing: -5px;
@@ -1128,7 +1157,7 @@ a:hover {
 .solutions .ex-container .list-container {
   flex: 1;
   overflow-y: auto;
-  height: 100vh;
+  height: 700px;
 }
 .solutions .ex-container .list-item {
   color: #6d8084;
@@ -1147,17 +1176,23 @@ a:hover {
 .solutions .ex-container .list-item:hover {
   color: #ff1a1a;
 }
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
+  .solutions .title {
+    padding-bottom: 10px;
+  }
   .solutions .title h2 {
-    font-size: 16px;
+    font-size: 18px;
     margin: 30px 0 15px 0;
   }
   .solutions .title p {
-    font-size: 40px;
+    width: 90%;
+    font-size: 45px;
     line-height: 45px;
+    letter-spacing: -2.5px;
   }
   .solutions .ex-container {
     display: flex;
+    margin: 30px 0 50px 0;
   }
   .solutions .ex-container .image-container {
     display: none;
@@ -1458,6 +1493,7 @@ a:hover {
   color: #fff;
 }
 .partners-title .title > h1 {
+  width: 40%;
   text-align: initial;
   font-size: 65px;
   font-weight: 700;
@@ -1474,6 +1510,17 @@ a:hover {
   background: #ff1a1a;
 }
 
+@media screen and (max-width: 767px) {
+  .partners-title {
+    padding: 30px 0 10px 0;
+  }
+  .partners-title .title > h1 {
+    width: 100%;
+    font-size: 45px;
+    letter-spacing: -2.5px;
+    line-height: 50px;
+  }
+}
 .top-footer {
   background-color: #2c2f33;
   padding: 100px 0 80px;
@@ -1942,11 +1989,6 @@ a:hover {
   }
   .feature-desc a {
     margin: 5px 5px 5px 0;
-  }
-  /* fun facts */
-  /* services */
-  #services .title {
-    padding-bottom: 60px;
   }
   /* our skills */
   .skill-chart {

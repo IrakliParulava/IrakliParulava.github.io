@@ -169,14 +169,14 @@
 }
 
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .about {
     padding: 50px 12px 50px 0;
 
     .title {
       >h2 {
         font-size: 18px;
-        margin: 30px 0 20px 0;
+        margin: 10px 0 10px 0;
       }
 
       >p {
@@ -215,8 +215,10 @@
       }
 
       .about-content {
+        padding: 25px;
+
         >h3 {
-          margin: 50px 0;
+          margin: 25px 0;
         }
 
         .sub-title {
@@ -232,27 +234,36 @@
       }
     }
 
+    .about-card-02 {
+      .about-content-02 {
+        padding: 25px;
+  
+        >h3 {
+          margin: 25px 0;
+        }
 
-    .about-content,
-    .about-content-02 {
-      padding: 25px;
+        .sub-title {
+          width: 95%;
+          margin: 35px 0px;
+        }
 
-      >h3 {
-        font-size: 26px;
-        margin-top: 25px;
-        line-height: 35px;
-      }
+        .about-text {
+          width: 95%;
+          padding-bottom: 0px;
+          margin: 30px 0px;
+        }
 
-      .sub-title {
-        font-size: 16px;
-        margin-top: 25px;
-        line-height: 120%;
-      }
-
-      .about-text {
-        margin-top: 20px;
-        font-size: 14px;
-        line-height: 150%;
+        .btn-main {
+          padding: 15px 20px;
+          margin: 0px 7px 20px 0;
+        }
+    
+        .btn-white {
+          color: $light;
+          background-color: $card-bg_color;
+          padding: 15px 25px;
+          margin: 0px 1px 20px 0;
+        }
       }
     }
   }

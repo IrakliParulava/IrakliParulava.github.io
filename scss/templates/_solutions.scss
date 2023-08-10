@@ -1,4 +1,5 @@
 .solutions {
+  padding-bottom: 100px;
   background-color: $light-bg_color;
 
   .title {
@@ -10,7 +11,9 @@
     }
 
     p {
-      text-align: initial;
+      width: 56%;
+      margin-left: 0;
+      text-align: start;
       font-size: 65px;
       font-weight: 700;
       letter-spacing: -5px;
@@ -32,20 +35,6 @@
   .list-container::-webkit-scrollbar {
     width: 0px;
   }
-
-  //   .list-container::-webkit-scrollbar-track {
-  //     background-color: lightgray;
-  //   }
-
-  //   .list-container::-webkit-scrollbar-thumb {
-  //     background-color: gray;
-  //   }
-
-  //   .list-container::-webkit-scrollbar-thumb:hover {
-  //     background-color: darkgray;
-  //   }
-
-
 
   .ex-container {
     display: grid;
@@ -72,7 +61,7 @@
     .list-container {
       flex: 1;
       overflow-y: auto;
-      height: 100vh;
+      height: 700px;
     }
 
     .list-item {
@@ -88,35 +77,34 @@
         font-family: $primary-font;
         font-size: 18px;
         font-weight: 600;
-
-        // &:hover {
-        //   color: $light;
-        // }
       }
-
 
       &:hover {
         color: $primary-color;
       }
-
     }
   }
 
-  @media only screen and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     .title {
+      padding-bottom: 10px;
+
       h2 {
-        font-size: 16px;
+        font-size: 18px;
         margin: 30px 0 15px 0;
       }
 
       p {
-        font-size: 40px;
+        width: 90%;
+        font-size: 45px;
         line-height: 45px;
+        letter-spacing: -2.5px;
       }
     }
 
     .ex-container {
       display: flex;
+      margin: 30px 0 50px 0;
 
       .image-container {
         display: none;

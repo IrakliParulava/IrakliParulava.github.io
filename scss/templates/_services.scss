@@ -1,7 +1,7 @@
 .services {
   padding: 1px 0;
   background-color: $light-bg_color;
-  
+
   .main-title {
     >h1 {
       font-size: 22px;
@@ -11,6 +11,7 @@
     }
 
     >p {
+      width: 70%;
       text-align: initial;
       font-size: 65px;
       font-weight: 700;
@@ -52,29 +53,33 @@
     background-size: cover;
     border-radius: 70px;
     transition: max-width 0.7s ease-in-out;
-  
+
     &:nth-child(2) {
       background-image: url(/images/services/Operations_Support.jpg);
     }
+
     &:nth-child(3) {
       background-image: url(/images/services/Maintenance\ Strategy.jpg);
     }
+
     &:nth-child(4) {
       background-image: url(/images/services/Reliability_Management.jpg);
     }
+
     &:nth-child(5) {
       background-image: url(/images/services/Sustainability.jpg);
     }
+
     &:nth-child(6) {
       background-image: url(/images/services/Learning_Development.jpg);
     }
-  
+
 
     &.active {
       max-width: 500px;
       max-height: 500px;
       display: inline-grid;
-  
+
       .title {
         all: unset;
 
@@ -83,7 +88,7 @@
           transform: unset;
         }
       }
-  
+
       p {
         position: relative;
         opacity: 1;
@@ -91,18 +96,18 @@
         transition-delay: 0.3s;
       }
     }
-  
+
     .card-body {
       background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #2d2d2d 100%);
       padding: 4em;
     }
-  
+
     .title {
       background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #2d2d2d 100%);
       position: absolute;
       inset: 0;
     }
-  
+
     h2 {
       font-family: $primary-font;
       font-size: clamp(30px, 5vw, 24px);
@@ -111,7 +116,7 @@
       margin: 0;
       transform: rotate(-90deg) translateX(-350px);
     }
-  
+
     p {
       position: absolute;
       font-family: $primary-font;
@@ -125,134 +130,60 @@
     }
   }
 
-  // .wrapper {
-  //   padding-top: 80px;
-  //   padding-bottom: 120px;
-  //   width: 100%;
-  //   margin: 0 auto;
-  // }
+  @media screen and (max-width: 767px) {
 
-  // .cards-row {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   gap: 2em;
-  //   padding: 2em 0;
-
-  //   .card {
-  //     display: flex;
-  //     align-items: flex-end;
-  //     justify-content: center;
-  //     position: relative;
-  //     max-width: 150px;
-  //     min-height: 500px;
-  //     text-align: center;
-  //     overflow: hidden;
-  //     cursor: pointer;
-
-  //   }
-  // }
-  // .card {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   width: 100%;
-  //   max-height: 600px;
-  //   margin: auto;
-  //   // top: 30px;
-  //   position: sticky;
-  //   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
-  //   background: $card-bg_color;
-  //   padding: 20px;
-  //   border-radius: 40px;
-  //   margin-bottom: 20px;
-
-  //   .card-img {
-  //     flex: 1 1 50%;
-  //     border-radius: 32px;
-  //     width: 50%;
-  //     overflow: hidden;
-
-  //     img {
-  //       height: 500px;
-  //       object-fit: cover;
-  //     }
-  //   }
-
-  //   .card-text {
-  //     flex: 2 1 50%;
-  //     width: 50%;
-  //     padding: 30px 30px;
-  //     // position: relative;
-
-  //     h2 {
-  //       color: $primary-color;
-  //       letter-spacing: -.05em;
-  //       font-size: 30px;
-  //       font-weight: 700;
-  //       line-height: 100%;
-
-  //     }
-
-  //     span {
-  //       // display: block;
-  //       color: $text-color;
-  //       font-size: 25px;
-  //       // line-height: 130%;
-  //       // margin-bottom: 40px;
-  //     }
-
-  //     p {
-  //       font-size: 18px;
-  //       font-weight: 600;
-  //       color: $text-color;
-  //       margin-top: 20px;
-  //     }
-  //   }
-  // }
-
-  // @for $i from 1 through 8 {
-  //   .card:nth-child(#{$i}n) {
-  //     top: $i * 90px;
-  //   }
-  // }
-
-  @media only screen and (max-width: 767px) {
-    .title {
-      >h2 {
-        font-size: 16px;
-        margin: 60px 0 15px 0;
-      }
-
-      >p {
-        font-size: 50px;
-        line-height: 50px;
-        letter-spacing: -2.5px;
-      }
-    }
-
-    .wrapper {
-      padding-top: 40px;
-      padding-bottom: 60px;
-    }
-
-    .card {
-
-      .card-text {
-        padding: 20px;
-
-        h2 {
-          font-size: 22px;
+      .main-title {
+        >h1 {
+          font-size: 18px;
+          margin: 100px 0 30px 0;
         }
 
-        span {
-          font-size: 14px;
-          margin-bottom: 25px;
-        }
+        >p {
+          width: 100%;
+          font-size: 45px;
+          letter-spacing: -2px;
+          line-height: 40px;
 
-        p {
-          font-size: 12px;
-          margin-top: 15%;
+          >span {
+            color: $primary-color;
+          }
         }
       }
-    }
+
+      .cards {
+        flex-direction: column; /* Change to column for a list layout */
+      }
+
+      .card {
+        max-width: 500px;
+        min-height: 70px;
+        border-radius: 30px;
+        transition: max-height 0.7s ease-in-out;
+    
+        &.active {
+          max-width: 500px;
+          max-height: 700px;
+    
+          .title {
+            h2 {
+              margin-bottom: 10px;
+            }
+          }
+        }
+    
+        .card-body {
+
+          .title {
+            background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #2d2d2d 100%);
+            // position: absolute;
+            
+            h2 {
+              font-size: clamp(22px, 5vw, 24px);
+              margin-top: 40px;
+              transform: none;
+            }
+          }
+        }
+      }
   }
 }
