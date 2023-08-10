@@ -1078,7 +1078,8 @@ a:hover {
     color: #ff1a1a;
   }
   .services .cards {
-    flex-direction: column; /* Change to column for a list layout */
+    flex-direction: column;
+    gap: 1em;
   }
   .services .card {
     max-width: 500px;
