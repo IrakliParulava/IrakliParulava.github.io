@@ -15,9 +15,6 @@
     autoplay: true,
     autoplaySpeed: 2000
   });
-
-
-
   
   $('.clients-logo-slider').slick({
     infinite: true,
