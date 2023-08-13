@@ -213,9 +213,47 @@ a:hover {
   letter-spacing: 1px;
   transition: 0.5s ease-in-out 0s;
 }
+.navigation .navbar-light .navbar-nav .nav-item .nav-link .lng {
+  color: #000;
+  text-decoration: none;
+}
 .navigation .navbar-light .navbar-nav .nav-item .nav-link:hover, .navigation .navbar-light .navbar-nav .nav-item .nav-link:active, .navigation .navbar-light .navbar-nav .nav-item .nav-link:focus {
   background: none;
   color: #ff1a1a;
+}
+.navigation .navbar-light .navbar-nav .nav-item .dropdownLng {
+  margin-top: 4px;
+  font-size: 10px;
+}
+.navigation .navbar-light .navbar-nav .nav-item .dropdownLng img {
+  width: 20px !important;
+  height: 10px !important;
+  margin-right: 10px;
+}
+.navigation .navbar-light .navbar-nav .nav-item .lngdropdown {
+  background: transparent;
+  margin: 0;
+}
+.navigation .navbar-light .navbar-nav .nav-item .lngdropdown li {
+  margin: 0;
+}
+.navigation .navbar-light .navbar-nav .nav-item .geo {
+  margin-top: 0;
+  padding: 0 10px;
+}
+.navigation .navbar-light .navbar-nav .nav-item .lng {
+  padding: 5px 15px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 100%;
+}
+.navigation .navbar-light .navbar-nav .nav-item .lng img {
+  width: 20px !important;
+  height: 10px !important;
+  margin-right: 10px;
+}
+.navigation .navbar-light .navbar-nav .language {
+  margin-right: -100px;
 }
 @media (max-width: 991px) {
   .navigation .nav-link {
@@ -302,6 +340,12 @@ a:hover {
   }
   .navigation .navbar-light .navbar-nav .nav-item .nav-link {
     color: #000;
+  }
+  .navigation .navbar-light .navbar-nav .language {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 1px;
   }
   .navigation .logo-white {
     display: none;
@@ -836,6 +880,7 @@ a:hover {
   margin: 50px 20px 0 0;
   color: #fff;
   transition: 0.7s;
+  cursor: pointer;
 }
 .contact-us .contact-page .contact-info .bi:hover {
   color: #333333;
@@ -1861,49 +1906,13 @@ a:hover {
   border: 0;
 }
 
-.btn-group {
-  margin: 30px 0;
-  width: 390px;
-  height: 45px;
-}
-.btn-group .btn-danger {
-  background-color: #ff1a1a;
-  border: none;
-  border-radius: 0;
-  outline: none;
-  font-size: 22px;
-  text-align: start;
-}
-.btn-group .btn-danger:focus {
-  box-shadow: none;
-}
-.btn-group .dropdown-menu {
-  padding-left: 0px;
-  width: 390px;
-}
-.btn-group .dropdown-menu li a {
-  display: block;
-  padding: 15px 0 15px 15px;
-  color: #000;
-  font-size: 15px;
-  transition: 0.3s ease;
-}
-.btn-group .dropdown-menu li a i {
-  font-size: 10px;
-  margin-right: 10px;
-}
-.btn-group .dropdown-menu li a:hover {
-  background: #ff1a1a;
-  color: #fff;
-  padding-left: 35px;
-}
-
 .widget h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 .widget-search {
   position: relative;
+  margin-bottom: 40px;
 }
 .widget-search .form-control {
   border: 1px solid #dedede;
@@ -1930,6 +1939,46 @@ a:hover {
 }
 .widget-categories-list li:last-child {
   border: 0;
+}
+.widget-categories-list li .accordion {
+  border-radius: 0;
+}
+.widget-categories-list li .accordion-item {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #ddd;
+}
+.widget-categories-list li .accordion-item h2 {
+  margin-bottom: 0;
+}
+.widget-categories-list li .accordion-item .accordion-body {
+  padding: 0 20px;
+}
+.widget-categories-list li .accordion-item .accordion-body .widget-categories-list:last-child {
+  border: 0;
+}
+.widget-categories-list li .accordion-button {
+  display: block;
+  padding: 15px 0;
+  color: #000;
+  font-size: 15px;
+  transition: 0.3s ease;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  text-align: start;
+  outline: none;
+}
+.widget-categories-list li .accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+.widget-categories-list li .accordion-button:hover {
+  background-color: #ff1a1a;
+  color: #fff;
+  padding-left: 20px;
+  border: none;
 }
 .widget-categories-list li a {
   display: block;

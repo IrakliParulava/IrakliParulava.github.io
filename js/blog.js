@@ -35,7 +35,7 @@ function addReply(name, message) {
     return div;
 }
 
-let activeReplyForm = null; // Keep track of the active reply form
+let activeReplyForm = null; 
 
 commentList.addEventListener("click", function (e) {
     let replyClicked = e.target.classList.contains("comment-btn");
@@ -45,7 +45,7 @@ commentList.addEventListener("click", function (e) {
 
     if (replyClicked && !closestCard.querySelector(".reply-details") && !activeReplyForm) {
         closestCard.appendChild(createInputBox());
-        e.target.style.pointerEvents = "none"; // Disable the button temporarily
+        e.target.style.pointerEvents = "none"; 
 
         activeReplyForm = closestCard.querySelector(".reply-details");
 
@@ -54,9 +54,9 @@ commentList.addEventListener("click", function (e) {
     }
 
     if (cancelClicked && activeReplyForm === closestCard.querySelector(".reply-details")) {
-        closestCard.querySelector(".comment-btn").style.pointerEvents = "auto"; // Enable the reply button
+        closestCard.querySelector(".comment-btn").style.pointerEvents = "auto"; 
         e.target.closest(".reply-details").remove();
-        activeReplyForm = null; // Clear the active reply form
+        activeReplyForm = null; 
     }
 
     if (submitClicked && activeReplyForm === closestCard.querySelector(".reply-details")) {
@@ -67,8 +67,8 @@ commentList.addEventListener("click", function (e) {
         if (nameInput.value && msgTextarea.value) {
             closestCard.appendChild(addReply(nameInput.value, msgTextarea.value));
             commentDetails.remove();
-            closestCard.querySelector(".comment-btn").style.pointerEvents = "auto"; // Enable the reply button
-            activeReplyForm = null; // Clear the active reply form
+            closestCard.querySelector(".comment-btn").style.pointerEvents = "auto"; 
+            activeReplyForm = null; 
         }
     }
 });

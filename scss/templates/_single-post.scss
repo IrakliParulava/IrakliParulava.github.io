@@ -1,19 +1,20 @@
 .single-page-header {
-	background-image: url('/images/blog/headBG2.jpg');
-	background-size: cover;
-	padding:200px 0 150px;
-	text-align: center;
-	color:$light;
-	position: relative;
-	&:before {
-		background: rgba(0, 0, 0, 0.8);
-		position: absolute;
-		content: '';
-		top:0;
-		right:0;
-		left:0;
-		bottom:0;
-	}
+  background-image: url('/images/blog/headBG2.jpg');
+  background-size: cover;
+  padding: 200px 0 150px;
+  text-align: center;
+  color: $light;
+  position: relative;
+
+  &:before {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
 }
 
 .posts {
@@ -142,7 +143,7 @@
     &-content {
       min-width: 100%;
       font-family: $primary-font;
-      
+
       h5 {
         color: $black;
         margin-bottom: 5px;
@@ -187,11 +188,11 @@
   }
 }
 
-.addComentTitle{
+.addComentTitle {
   margin-top: 90px;
 }
 
-.reply-details{
+.reply-details {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
@@ -207,7 +208,7 @@
     padding: 5px 10px;
     margin-bottom: 10px;
     font-family: $primary-font;
-    
+
   }
 
   input.reply-control {
@@ -291,54 +292,7 @@
   }
 }
 
-.btn-group {
-  margin: 30px 0;
-  width: 390px;
-  height: 45px;
-
-  .btn-danger {
-    background-color: $primary-color;
-    border: none;
-    border-radius: 0;
-    outline: none;
-    font-size: 22px;
-    text-align: start;
-
-    &:focus {
-      box-shadow: none;
-    }
-  }
-
-  .dropdown-menu {
-    padding-left: 0px;
-    width: 390px;
-
-    li {
-      a {
-        display: block;
-        padding: 15px 0 15px 15px;
-        color: #000;
-        font-size: 15px;
-        transition: .3s ease;
-
-        i {
-          font-size: 10px;
-          margin-right: 10px;
-        }
-
-        &:hover {
-          background: $primary-color;
-          color: $light;
-          padding-left: 35px;
-        }
-      }
-    }
-  }
-}
-
 .widget {
-  
-
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -346,6 +300,7 @@
 
   &-search {
     position: relative;
+    margin-bottom: 40px;
 
     .form-control {
       border: 1px solid #dedede;
@@ -371,12 +326,75 @@
   &-categories {
     &-list {
       padding-left: 0px;
-
+      
       li {
         border-bottom: 1px solid #ddd;
 
         &:last-child {
           border: 0;
+        }
+
+        .accordion {
+          border-radius: 0;
+        }
+
+        .accordion-item {
+          border: 0;
+          border-radius: 0;
+          border-bottom: 1px solid #ddd;
+
+          h2{
+            margin-bottom: 0;
+          }
+
+          .accordion-body {
+            padding: 0 20px;
+
+            .widget-categories-list{
+              &:last-child {
+                border: 0;
+              }
+            }
+            
+          }
+        }
+
+        // .collapse {
+        //   .card-body {
+        //     border-radius: 0;
+        //   }
+        // }
+
+        .accordion-button {
+          display: block;
+          padding: 15px 0;
+          color: #000;
+          font-size: 15px;
+          transition: .3s ease;
+          background-color: transparent;
+          border: none;
+          border-radius: 0;
+          width: 100%;
+          text-align: start;
+          outline: none;
+
+          &:focus {
+            box-shadow: none;
+            border: none;
+          }
+
+          &:hover {
+            background-color: $primary-color;
+            color: $light;
+            padding-left: 20px;
+            border: none;
+          }
+
+          // &:active {
+          //   background-color: green;
+          //   color: $light;
+          //   padding-left: 20px;
+          // }
         }
 
         a {
