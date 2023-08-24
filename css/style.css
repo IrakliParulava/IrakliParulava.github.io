@@ -573,7 +573,7 @@ a:hover {
   margin: 30px 50px;
   color: #6d8084;
   font-family: "Manrope", sans-serif;
-  font-family: 17px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: -0.5px;
   line-height: 150%;
@@ -629,7 +629,7 @@ a:hover {
   width: 90%;
   color: #6d8084;
   font-family: "Manrope", sans-serif;
-  font-family: 17px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: -0.5px;
   line-height: 150%;
@@ -859,7 +859,8 @@ a:hover {
   text-align: start;
   margin: 30px 0 0 50px;
 }
-.contact-us .contact-page .contact-info .contact-short-info li > span {
+.contact-us .contact-page .contact-info .contact-short-info li > a,
+.contact-us .contact-page .contact-info .contact-short-info li span {
   font-family: "Manrope", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -1030,7 +1031,7 @@ a:hover {
   margin: 50px auto;
   justify-content: center;
 }
-.services .card {
+.services .service__card {
   align-items: flex-end;
   justify-content: center;
   position: relative;
@@ -1047,49 +1048,49 @@ a:hover {
   border-radius: 70px;
   transition: max-width 0.7s ease-in-out;
 }
-.services .card:nth-child(2) {
+.services .service__card:nth-child(2) {
   background-image: url(/images/services/Operations_Support.jpg);
 }
-.services .card:nth-child(3) {
+.services .service__card:nth-child(3) {
   background-image: url(/images/services/Maintenance\ Strategy.jpg);
 }
-.services .card:nth-child(4) {
+.services .service__card:nth-child(4) {
   background-image: url(/images/services/Reliability_Management.jpg);
 }
-.services .card:nth-child(5) {
+.services .service__card:nth-child(5) {
   background-image: url(/images/services/Sustainability.jpg);
 }
-.services .card:nth-child(6) {
+.services .service__card:nth-child(6) {
   background-image: url(/images/services/Learning_Development.jpg);
 }
-.services .card.active {
+.services .service__card.active {
   max-width: 500px;
   max-height: 500px;
   display: inline-grid;
 }
-.services .card.active .title {
+.services .service__card.active .title {
   all: unset;
 }
-.services .card.active .title h2 {
+.services .service__card.active .title h2 {
   padding-bottom: 0.5em;
   transform: unset;
 }
-.services .card.active p {
+.services .service__card.active p {
   position: relative;
   opacity: 1;
   max-height: 100%;
   transition-delay: 0.3s;
 }
-.services .card .card-body {
+.services .service__card .card-body {
   background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #2d2d2d 100%);
   padding: 4em;
 }
-.services .card .title {
+.services .service__card .title {
   background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #2d2d2d 100%);
   position: absolute;
   inset: 0;
 }
-.services .card h2 {
+.services .service__card h2 {
   font-family: "Manrope", sans-serif;
   font-size: clamp(30px, 5vw, 24px);
   color: #fffbfb;
@@ -1097,7 +1098,7 @@ a:hover {
   margin: 0;
   transform: rotate(-90deg) translateX(-350px);
 }
-.services .card p {
+.services .service__card p {
   position: absolute;
   font-family: "Manrope", sans-serif;
   font-weight: 600;
@@ -1126,23 +1127,23 @@ a:hover {
     flex-direction: column;
     gap: 1em;
   }
-  .services .card {
+  .services .service__card {
     max-width: 500px;
     min-height: 70px;
     border-radius: 30px;
     transition: max-height 0.7s ease-in-out;
   }
-  .services .card.active {
+  .services .service__card.active {
     max-width: 500px;
     max-height: 700px;
   }
-  .services .card.active .title h2 {
+  .services .service__card.active .title h2 {
     margin-bottom: 10px;
   }
-  .services .card .card-body .title {
+  .services .service__card .card-body .title {
     background: linear-gradient(180deg, rgba(45, 45, 45, 0) 0%, #2d2d2d 100%);
   }
-  .services .card .card-body .title h2 {
+  .services .service__card .card-body .title h2 {
     font-size: clamp(22px, 5vw, 24px);
     margin-top: 40px;
     transform: none;
@@ -1153,11 +1154,14 @@ a:hover {
   padding-bottom: 100px;
   background-color: #eeeeee;
 }
+.solutions .title {
+  padding-bottom: 40px;
+}
 .solutions .title h2 {
   text-align: initial;
   font-size: 22px;
   color: #6d8084;
-  margin: 70px 0 30px 0;
+  margin: 40px 0 30px 0;
 }
 .solutions .title p {
   width: 56%;
@@ -1172,54 +1176,36 @@ a:hover {
 .solutions .title p > span {
   color: #ff1a1a;
 }
-.solutions .list-container {
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(128, 128, 128, 0) rgba(211, 211, 211, 0);
+.solutions .carousel-indicators {
+  margin-bottom: -2rem;
 }
-.solutions .list-container::-webkit-scrollbar {
-  width: 0px;
+.solutions .carousel-indicators button {
+  height: 10px;
+  background-color: #ff1a1a;
 }
-.solutions .ex-container {
-  display: grid;
-  grid-template-columns: 45% 55%;
-  max-height: 650px;
-  margin: 30px 0 100px 0;
+.solutions .carousel-inner {
+  transition-duration: 0.2s;
 }
-.solutions .ex-container .image-container {
-  flex: 1;
-  margin-right: 20px;
-  padding: 80px 70px 80px 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.solutions .ex-container .image-container img {
-  width: 100%;
-  height: 520px;
-  border-radius: 50px;
-  object-fit: cover;
-}
-.solutions .ex-container .list-container {
-  flex: 1;
-  overflow-y: auto;
-  height: 700px;
-}
-.solutions .ex-container .list-item {
-  color: #6d8084;
-  padding: 50px 10px 40px 0px;
-  border-bottom: 0.5px solid #6d8084;
+.solutions .card {
+  border-radius: 0;
+  padding: 20px;
+  border: none;
   cursor: pointer;
-  box-shadow: none;
-  transition: 0.5s;
 }
-.solutions .ex-container .list-item p {
-  margin-top: 40px;
+.solutions .card .img-fluid {
+  height: 270px !important;
+}
+.solutions .card .card-body {
   font-family: "Manrope", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
 }
-.solutions .ex-container .list-item:hover {
+.solutions .card .card-body .card-title {
+  height: 80px !important;
+  margin-top: 15px;
+}
+.solutions .card .card-body .card-text {
+  height: 100px !important;
+}
+.solutions .card:hover {
   color: #ff1a1a;
 }
 @media screen and (max-width: 767px) {
@@ -2037,6 +2023,114 @@ a:hover {
 }
 .widget-post-content h5:hover {
   color: #ff1a1a;
+}
+
+.page-header {
+  background-image: url("/images/blog/headBG2.jpg");
+  background-size: cover;
+  padding: 100px 0 100px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.page-header:before {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#privacy h1 {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+#privacy h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+#privacy h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+#privacy .content {
+  margin-bottom: 150px;
+}
+
+[lang=ka] .hero-area .content-hero .content-title > h1 {
+  font-size: 60px;
+  letter-spacing: 0;
+}
+[lang=ka] .hero-area .content-hero .content-title > h1 > span {
+  font-size: 60px;
+  letter-spacing: 0;
+}
+[lang=ka] .hero-area .content-hero .content-text p {
+  font-size: 16px;
+}
+[lang=ka] .about .title > p {
+  font-size: 42px;
+  line-height: 50px;
+  letter-spacing: -3px;
+}
+[lang=ka] .about .about-card .about-content > h3 {
+  font-size: 32px;
+  letter-spacing: -0.75px;
+}
+[lang=ka] .about .about-card .about-content .sub-title {
+  font-size: 24px;
+}
+[lang=ka] .about .about-card .about-content .about-text {
+  font-size: 14px;
+}
+[lang=ka] .about .about-card-02 .about-content-02 > h3 {
+  font-size: 32px;
+  letter-spacing: -0.75px;
+}
+[lang=ka] .about .about-card-02 .about-content-02 .sub-title {
+  font-size: 24px;
+}
+[lang=ka] .about .about-card-02 .about-content-02 .about-text {
+  font-size: 14px;
+}
+[lang=ka] .our-value .title {
+  display: flex;
+  align-items: center;
+}
+[lang=ka] .our-value .title > h2 {
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+[lang=ka] .services .main-title > h1 {
+  letter-spacing: -2px;
+}
+[lang=ka] .services .main-title > p {
+  width: 75%;
+  font-size: 40px;
+  letter-spacing: -4px;
+  line-height: 50px;
+}
+[lang=ka] .partners-title .title > h1 {
+  font-size: 40px;
+  letter-spacing: -3px;
+  line-height: 50px;
+}
+[lang=ka] .solutions .title > h2 {
+  letter-spacing: -2px;
+}
+[lang=ka] .solutions .title > p {
+  font-size: 42px;
+  letter-spacing: -3px;
+  line-height: 50px;
+}
+[lang=ka] .contact-us .contact-page .contact-info .contact-short-info > h5 {
+  font-size: 22px;
+}
+[lang=ka] .top-footer > p {
+  font-size: 11px;
+  letter-spacing: 0px;
 }
 
 /*============================================================

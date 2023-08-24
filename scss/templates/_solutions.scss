@@ -3,11 +3,13 @@
   background-color: $light-bg_color;
 
   .title {
+    padding-bottom: 40px;
+
     h2 {
       text-align: initial;
       font-size: 22px;
       color: $text-color;
-      margin: 70px 0 30px 0;
+      margin: 40px 0 30px 0;
     }
 
     p {
@@ -26,64 +28,110 @@
     }
   }
 
-  .list-container {
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(128, 128, 128, 0) rgba(211, 211, 211, 0);
+
+  .carousel-indicators {
+    margin-bottom: -2rem;
+
+    button {
+      height: 10px;
+      background-color: $primary-color;
+    }
   }
 
-  .list-container::-webkit-scrollbar {
-    width: 0px;
+  .carousel-inner {
+    transition-duration: 0.2s;
   }
 
-  .ex-container {
-    display: grid;
-    grid-template-columns: 45% 55%;
-    max-height: 650px;
-    margin: 30px 0 100px 0;
+  .card {
+    border-radius: 0;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
 
-    .image-container {
-      flex: 1;
-      margin-right: 20px;
-      padding: 80px 70px 80px 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+    .img-fluid {
+      height: 270px !important;
+    }
 
-      img {
-        width: 100%;
-        height: 520px;
-        border-radius: 50px;
-        object-fit: cover;
+    .card-body {
+      font-family: $primary-font;
+
+      .card-title {
+        height: 80px !important;
+        margin-top: 15px;
+      }
+
+      .card-text {
+        height: 100px !important;
       }
     }
 
-    .list-container {
-      flex: 1;
-      overflow-y: auto;
-      height: 700px;
-    }
+    &:hover {
+      color: $primary-color;
 
-    .list-item {
-      color: $text-color;
-      padding: 50px 10px 40px 0px;
-      border-bottom: 0.5px solid $text-color;
-      cursor: pointer;
-      box-shadow: none;
-      transition: 0.5s;
-
-      p {
-        margin-top: 40px;
-        font-family: $primary-font;
-        font-size: 18px;
-        font-weight: 600;
-      }
-
-      &:hover {
-        color: $primary-color;
-      }
     }
   }
+
+
+
+
+  // .list-container {
+  //   overflow-y: auto;
+  //   scrollbar-width: thin;
+  //   scrollbar-color: rgba(128, 128, 128, 0) rgba(211, 211, 211, 0);
+  // }
+
+  // .list-container::-webkit-scrollbar {
+  //   width: 0px;
+  // }
+
+  // .ex-container {
+  //   display: grid;
+  //   grid-template-columns: 45% 55%;
+  //   max-height: 650px;
+  //   margin: 30px 0 100px 0;
+
+  //   .image-container {
+  //     flex: 1;
+  //     margin-right: 20px;
+  //     padding: 80px 70px 80px 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     overflow: hidden;
+
+  //     img {
+  //       width: 100%;
+  //       height: 520px;
+  //       border-radius: 50px;
+  //       object-fit: cover;
+  //     }
+  //   }
+
+  //   .list-container {
+  //     flex: 1;
+  //     overflow-y: auto;
+  //     height: 700px;
+  //   }
+
+  //   .list-item {
+  //     color: $text-color;
+  //     padding: 50px 10px 40px 0px;
+  //     border-bottom: 0.5px solid $text-color;
+  //     cursor: pointer;
+  //     box-shadow: none;
+  //     transition: 0.5s;
+
+  //     p {
+  //       margin-top: 40px;
+  //       font-family: $primary-font;
+  //       font-size: 18px;
+  //       font-weight: 600;
+  //     }
+
+  //     &:hover {
+  //       color: $primary-color;
+  //     }
+  //   }
+  // }
 
   @media screen and (max-width: 767px) {
     .title {

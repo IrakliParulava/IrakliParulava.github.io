@@ -35,6 +35,8 @@ function addReply(name, message) {
     return div;
 }
 
+
+
 let activeReplyForm = null; 
 
 commentList.addEventListener("click", function (e) {

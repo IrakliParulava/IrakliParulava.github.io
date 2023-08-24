@@ -1,16 +1,18 @@
 .navigation {
-    padding: 15px 0;
-    transition: .5s all;
+  padding: 15px 0;
+  transition: .5s all;
 
   .logo-default {
     display: none;
   }
 
   .dropdown-toggle {
+
     &::before,
     &::after {
       display: none;
     }
+
     i {
       font-size: 10px;
       margin-left: 2px;
@@ -43,7 +45,7 @@
         }
       }
 
-      .dropdownLng{
+      .dropdownLng {
         margin-top: 4px;
         font-size: 10px;
 
@@ -53,38 +55,43 @@
           margin-right: 10px;
         }
 
-        
+
       }
-      
+
       .lngdropdown {
         background: transparent;
         margin: 0;
+
         li {
           margin: 0;
         }
       }
+
       .geo {
         margin-top: 0;
         padding: 0 10px;
       }
+
       .lng {
         padding: 5px 15px;
         font-size: 10px;
         font-weight: 600;
         line-height: 100%;
+
         img {
           width: 20px !important;
           height: 10px !important;
           margin-right: 10px;
         }
       }
-      
-    //   &.active {
-    //     .nav-link {
-    //       color: $primary-color;
-    //     }
-    //   }
+
+      //   &.active {
+      //     .nav-link {
+      //       color: $primary-color;
+      //     }
+      //   }
     }
+
     .language {
       margin-right: -100px;
     }
@@ -94,12 +101,13 @@
     .nav-link {
       padding: 6px !important;
     }
-    
+
     .navbar-collapse.show {
       overflow-y: auto;
       max-height: calc(100vh - 55px);
     }
   }
+
   .dropdown-submenu .dropdown-menu {
     margin: 0;
     background-color: #131313;
@@ -110,18 +118,20 @@
       left: 100%;
       top: -5px;
     }
+
     .dropleft .dropdown-menu {
       left: auto;
       right: 100%;
       margin: 0;
       top: -5px;
     }
+
     .dropdown-submenu .dropdown-menu {
       background-color: #000;
     }
   }
 
-  .dropdown:hover > .dropdown-menu {
+  .dropdown:hover>.dropdown-menu {
     visibility: visible;
     opacity: 1;
   }
@@ -138,8 +148,13 @@
     background: #00000094;
     transition: .3s ease;
 
-    li:first-child {margin-top: 12px}
-    li:last-child {margin-bottom: 12px}
+    li:first-child {
+      margin-top: 12px
+    }
+
+    li:last-child {
+      margin-bottom: 12px
+    }
   }
 
   @media (max-width: 991px) {
@@ -156,6 +171,7 @@
     .dropdown-menu.show {
       display: block;
     }
+
     .dropdown-menu {
       float: left;
       width: 100%;
@@ -186,6 +202,7 @@
           color: $black;
         }
       }
+
       .language {
         display: flex;
         justify-content: center;

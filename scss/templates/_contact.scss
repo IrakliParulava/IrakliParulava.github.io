@@ -47,7 +47,8 @@
     
             .contact-short-info {
                 li {
-                    >span {
+                    >a,
+                    span {
                         font-family: $primary-font;
                         font-size: 16px;
                         font-weight: 600;

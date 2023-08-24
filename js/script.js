@@ -8,6 +8,9 @@
 			}, 300);
 		});
   }
+
+  
+  
   
   $('.testimonial-slider').slick({
     infinite: true,
@@ -100,20 +103,16 @@ $(window).scroll(function () {
 
 
 
-$(".card").click(function () {
+$(".service__card").click(function () {
   if ($(this).hasClass("active")) {
     $(this).removeClass("active");
   } else {
-    $(".card").removeClass("active");
+    $(".service__card").removeClass("active");
     $(this).addClass("active");
   }
 });
 
-
-
-
 })(jQuery);
-
 
 
 // const tabElms = document.querySelectorAll('a[data-bs-toggle="list"]')
@@ -127,49 +126,49 @@ $(".card").click(function () {
 
 
 
-const scrollList = document.getElementById('scroll-list');
-const imageElement = document.getElementById('active-image');
-const titleElement = document.querySelector('.title h2');
-const paragraphElement = document.querySelector('.title p');
+// const scrollList = document.getElementById('scroll-list');
+// const imageElement = document.getElementById('active-image');
+// const titleElement = document.querySelector('.title h2');
+// const paragraphElement = document.querySelector('.title p');
 
-const listItems = scrollList.getElementsByClassName('list-item');
+// const listItems = scrollList.getElementsByClassName('list-item');
 
-function handleItemHover(event) {
-  const listItem = event.target.closest('.list-item');
-  const titleText = listItem.getAttribute('data-title');
-  const paragraphText = listItem.querySelector('p').textContent;
-  const imageLink = getImageLink(titleText);
+// function handleItemHover(event) {
+//   const listItem = event.target.closest('.list-item');
+//   const titleText = listItem.getAttribute('data-title');
+//   const paragraphText = listItem.querySelector('p').textContent;
+//   const imageLink = getImageLink(titleText);
   
-  titleElement.textContent = titleText;
-  paragraphElement.textContent = paragraphText;
-  imageElement.src = imageLink;
-}
+//   titleElement.textContent = titleText;
+//   paragraphElement.textContent = paragraphText;
+//   imageElement.src = imageLink;
+// }
 
-Array.from(listItems).forEach((listItem) => {
-  listItem.addEventListener('mouseover', handleItemHover);
-});
+// Array.from(listItems).forEach((listItem) => {
+//   listItem.addEventListener('mouseover', handleItemHover);
+// });
 
-function getImageLink(titleText) {
-  switch (titleText) {
-    case "Electrical Inspections and Quality Control":
-      return "./images/services/Electrical Inspections and Quality Control.jpeg";
-    case "Electrical Commissioning":
-      return "./images/services/Electrical_Commissioning.jpg";
-    case "Switchgear Testing":
-      return "./images/portfolio/portfolio-3.jpg";
-    case "Thermographic Survey":
-      return "./images/portfolio/portfolio-4.jpg";
-    case "Partial Discharge Survey":
-      return "./images/portfolio/portfolio-5.jpg";
-    case "Energy Optimization":
-      return "./images/portfolio/portfolio-6.jpg";
-    case "Relay Injection Testing":
-      return "./images/portfolio/portfolio-7.jpg";
-    case "Feasibility Assessments":
-      return "./images/portfolio/portfolio-8.jpg";
-    case "Training and Compliance":
-      return "./images/portfolio/portfolio-9.jpg";
-    default:
-      return "./images/portfolio/default-image.jpg";
-  }
-}
+// function getImageLink(titleText) {
+//   switch (titleText) {
+//     case "Electrical Inspections and Quality Control":
+//       return "./images/services/Electrical Inspections and Quality Control.jpeg";
+//     case "Electrical Commissioning":
+//       return "./images/services/Electrical_Commissioning.jpg";
+//     case "Switchgear Testing":
+//       return "./images/portfolio/portfolio-3.jpg";
+//     case "Thermographic Survey":
+//       return "./images/portfolio/portfolio-4.jpg";
+//     case "Partial Discharge Survey":
+//       return "./images/portfolio/portfolio-5.jpg";
+//     case "Energy Optimization":
+//       return "./images/portfolio/portfolio-6.jpg";
+//     case "Relay Injection Testing":
+//       return "./images/portfolio/portfolio-7.jpg";
+//     case "Feasibility Assessments":
+//       return "./images/portfolio/portfolio-8.jpg";
+//     case "Training and Compliance":
+//       return "./images/portfolio/portfolio-9.jpg";
+//     default:
+//       return "./images/portfolio/default-image.jpg";
+//   }
+// }
