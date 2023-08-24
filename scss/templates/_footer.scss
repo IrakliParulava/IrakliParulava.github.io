@@ -55,17 +55,18 @@
     margin-bottom: 3px;
   }
 
-  h6 {
-    font-size: 11px;
-    line-height: 15px;
-    color: #888888;
-    font-weight: 400;
-    text-transform: capitalize;
-    letter-spacing: 2px;
-    margin-bottom: 0;
-  }
-
   a {
     color: $primary-color;
+  }
+
+  .privacy {
+    font-size: 12px;
+    line-height: 1;
+    color: $text-color;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 7px;
+    margin-bottom: 3px;
   }
 }
